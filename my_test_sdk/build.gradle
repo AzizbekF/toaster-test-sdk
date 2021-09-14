@@ -5,11 +5,12 @@ plugins {
     id 'maven-publish'
 }
 
-project.afterEvaluate {
+afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
                 from components.release
+                version '1.4.0'
             }
         }
     }
